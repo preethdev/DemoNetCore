@@ -66,7 +66,7 @@ public static class SwaggerConfig
 
     public static void SwaggerUIConfiguration(WebApplication app, IConfiguration Configuration)
     {
-        if (app != null && app.Environment.IsDevelopment())
+        if (app != null && !app.Environment.IsDevelopment())
         {
             app.UseSwagger();
             app.UseSwaggerUI(options =>
